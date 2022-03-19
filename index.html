@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Gesture Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h1 id="heading" class="btn btn-warning "> Gesture Web App <br> 🖐👍🙌🤞🤘</h1>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to get the gesture</p>
+      <div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <label class="btn btn-info" style="color:rgb(255, 47, 106); font-weight: bold;"> Webcam </label>
+          <br><br>
+          <div id="camera">
+            
+          </div>
+          <br>
+          <button class="btn btn-warning" onclick="snapshot()">Capture Image</button>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div>
+            <label class="btn btn-info" style="color:rgb(255, 47, 106); font-weight: bold;"> Prediction 1:</label>
+            <h3 class="emotion_name" id="prediction1_name"></h3>
+            <h3 class="emoji" id="prediction1_emoji"> </h3>
+          </div>
+          <br><br>
+          <div>
+            <label class="btn btn-info" style="color:rgb(255, 47, 106); font-weight: bold;"> Prediction 2:</label>
+            <h3 id="prediction2_name" class="emotion_name"></h3>
+            <h3 class="emoji" id="prediction2_emoji"> </h3>
+          </div>
+
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label class="btn btn-info" style="color:rgb(255, 47, 106); font-weight: bold;" >Snapshot - </label>
+          <br><br>
+          <div id="result">
+  
+  
+          </div>
+  
+          <br><br>
+          <button onclick="check()" class="btn btn-success"> Prediction</button>
+  
+        </div>
+      </div>
+
+      
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
